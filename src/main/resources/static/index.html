@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Гуси 🦆</title>
+    <style>
+      body {
+        background-color: #f0faff;
+        font-family: sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      img {
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        max-width: 90%;
+      }
+      button {
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 16px;
+        background-color: #00bcd4;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0097a7;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Добро пожаловать к гусям! 🦆</h1>
+    <img id="goose" src="https://random-d.uk/api/randomimg" alt="Гусь" />
+    <br />
+    <button onclick="newGoose()">Новый гусь</button>
+
+    <script>
+      function newGoose() {
+        const ts = new Date().getTime(); // Добавим параметр, чтобы обойти кеш
+        document.getElementById("goose").src =
+          "https://random-d.uk/api/randomimg?" + ts;
+      }
+    </script>
+  </body>
+</html>
+
