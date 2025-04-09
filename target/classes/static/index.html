@@ -38,7 +38,7 @@
 
     <script>
       function newGoose() {
-        const ts = new Date().getTime(); // Добавим параметр, чтобы обойти кеш
+        const ts = new Date().getTime(); 
         document.getElementById("goose").src =
           "https://random-d.uk/api/randomimg?" + ts;
       }
